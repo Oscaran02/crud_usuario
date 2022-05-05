@@ -1,4 +1,4 @@
-import model
+import models
 
 from validate_email import validate_email
 
@@ -21,7 +21,7 @@ def validating_age(age):
 def create_persona(name, last_name, age, email):
     if validating_email(email):
         if validating_age(age):
-            if model.create_persona(name, last_name, age, email):
+            if models.create_persona(name, last_name, int(age), email):
                 return True
             else:
                 return False
@@ -34,7 +34,7 @@ def create_persona(name, last_name, age, email):
 # Edit and validate a person
 def edit_persona(name, last_name, age, email):
     if validating_age(age):
-        if model.edit_persona(name, last_name, age, email):
+        if models.edit_persona(name, last_name, int(age), email):
             return True
         else:
             return False
@@ -42,7 +42,7 @@ def edit_persona(name, last_name, age, email):
 
 # Delete a person
 def delete_persona(email):
-    if model.delete_persona(email):
+    if models.delete_persona(email):
         return True
     else:
         return False
@@ -50,9 +50,9 @@ def delete_persona(email):
 
 # Show a person
 def show_persona(email):
-    return model.show_persona(email)
+    return models.show_persona(email)
 
 
 # Show all people
 def show_all_personas():
-    model.show_all_personas()
+    models.show_all_personas()

@@ -4,5 +4,11 @@
         "last_name": "Pacheco",
         "age": "22",
         "email": "oscarandrespacheco@gmail.com"
+    },
+    {
+        "name": "John",
+        "last_name": "Doe",
+        "age": 15,
+        "email": "example@example.com"
     }
 ]
