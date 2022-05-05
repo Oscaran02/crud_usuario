@@ -86,11 +86,14 @@ def edit_persona(name, last_name, age, email):
     try:
         personas = load_json()
         for persona in personas:
-            persona = Persona(**persona)
-            if persona.get_email() == email:
-                persona.set_name(name)
-                persona.set_last_name(last_name)
-                persona.set_age(age)
+            persona1 = Persona(**persona)
+            if persona1.get_email() == email:
+                persona.update({
+                    "name": name,
+                    "last_name": last_name,
+                    "age": age,
+                    "email": email
+                })
                 save_json(personas)
                 return True
         return False
