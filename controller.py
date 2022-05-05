@@ -1,6 +1,6 @@
-import models
-
 from validate_email import validate_email
+
+import models
 
 
 # check if email is valid
