@@ -1,4 +1,6 @@
 # CRUD_Usuario
+The objective of this program is to realize a complete person CRUD using an MVC
+design/architectural pattern.
 
 ## Development
 
